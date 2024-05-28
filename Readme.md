@@ -2,7 +2,7 @@
 
 * Студент: [Екатерина Ванюшкина](https://up.htmlacademy.ru/htmlcss/40/user/821647).
 * Наставник: [Андрей Грачев](https://htmlacademy.ru/profile/angra).
-
+* Проект: [Мой проект Седона](https://keityjones.github.io/821647-sedona-40/).
 ---
 
 _Не удаляйте и не обращайте внимание на файлы:_<br>
