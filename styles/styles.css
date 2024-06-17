@@ -243,7 +243,10 @@ body {
 }
 
 .catalog-view-button-active {
+  color: #000000;
+  font-weight: 400;
   border: 2px #000000 solid;
+  text-transform: none;
 }
 
 /* Hotel Card */
