@@ -15,7 +15,7 @@
 }
 
 body {
-  font-family: "Pt Sans", sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
@@ -38,8 +38,6 @@ body {
 
 .navigation-button {
   background-color: #756157;
-  width: 160px;
-  height: 36px;
 }
 
 .button-big {
@@ -238,21 +236,21 @@ body {
 .catalog-view-button {
   color: #000000;
   font-weight: 400;
-  border: 2px #e5e5e5 solid;
+  border: 2px solid #e5e5e5;
   text-transform: none;
 }
 
 .catalog-view-button-active {
   color: #000000;
   font-weight: 400;
-  border: 2px #000000 solid;
+  border: 2px solid #000000;
   text-transform: none;
 }
 
 /* Hotel Card */
 
 .hotel-card-item {
-  border: 1px #e6e6e6 solid;
+  border: 1px solid #e6e6e6;
 }
 
 .hotel-card-link {
