@@ -115,7 +115,8 @@ body {
 .navigation {
   display: flex;
   width: 1200px;
-  margin: 0 auto;
+  margin: 0;
+  padding: 0;
 }
 
 .navigation-logo {
@@ -131,6 +132,8 @@ body {
 }
 
 .navigation-user {
+  margin: 0;
+  padding: 0;
   max-width: 300px;
   margin-left: auto;
 }
@@ -157,7 +160,8 @@ body {
 .page-footer-container {
   display: flex;
   width: 1200px;
-  margin: 0 auto;
+  margin: 0;
+  padding: 0;
   justify-content: space-between;
 }
 
@@ -225,6 +229,7 @@ body {
 }
 
 .advantages-item-wide {
+  display: flex;
   width: 1200px;
   background-color: #82b3d3;
   color: #ffffff;
@@ -317,7 +322,7 @@ body {
 }
 
 .filter-buttons-wrapper {
-  width: 191px;
+  width: 190px;
   margin-left: 70px;
 }
 
@@ -373,7 +378,9 @@ body {
 .hotel-card-list {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
+  padding: 0;
   gap: 20px;
 }
 
