@@ -60,7 +60,6 @@
           </header>
           <section class="catalog-filter">
             <h2 class="visually-hidden">Фильтры для подбора гостиниц</h2>
-
             <form class="catalog-filter-form" action="https://echo.htmlacademy.ru/" method="get">
               <div class="form-container">
                 <fieldset class="catalog-filter-group">
@@ -126,17 +125,17 @@
               <option value="expensive">Сначала дорогие</option>
             </select>
             <ul class="catalog-view">
-              <li class="catalog-view-item">
-                <a class="button catalog-view-button-active" href="catalog.html?view=tile" title="Вид: плитка">
+              <li class="catalog-view-item view-item-active">
+                <a class="button catalog-view-button" href="catalog.html?view=tile" title="Вид: плитка">
                   <span class="visually-hidden">Вид: плитка</span>
                 </a>
               </li>
-              <li class="catalog-list-type-item">
+              <li class="catalog-view-item">
                 <a class="button catalog-view-button" href="catalog.html?view=card" title="Вид: полноэкранный">
                   <span class="visually-hidden">Вид: полноэкранный</span>
                 </a>
               </li>
-              <li class="catalog-list-type-item">
+              <li class="catalog-view-item">
                 <a class="button catalog-view-button" href="catalog.html?view=list" title="Вид: список">
                   <span class="visually-hidden">Вид: список</span>
                 </a>
@@ -227,8 +226,10 @@
           </ul>
         </section>
         <section class="subscribe">
-          <h2 class="page-lead">Подпишитесь на рассылку</h2>
-          <p class="page-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
+          <div class="lead-wrapper">
+            <h2 class="page-lead">Подпишитесь на рассылку</h2>
+            <p class="page-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
+          </div>
           <form class="subscribe-form" method="post" action="https://echo.htmlacademy.ru/">
             <label>
               <span class="visually-hidden">Ваш email</span>
