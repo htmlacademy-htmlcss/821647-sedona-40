@@ -67,6 +67,7 @@ body {
   border-style: none;
   border-radius: 4px;
   box-sizing: border-box;
+  cursor: pointer;
 }
 
 .button:active {
@@ -85,7 +86,7 @@ body {
 }
 
 .navigation-button:hover,
-.navigation-button:focus {
+.navigation-button:focus-visible {
   background-color: #615048;
 }
 
@@ -98,27 +99,29 @@ body {
 }
 
 .button-big:hover,
-.button-big:focus,
+.button-big:focus-visible,
 .hotel-card-about-button:hover,
-.hotel-card-about-button:focus {
+.hotel-card-about-button:focus-visible {
   background-color: #615048;
 }
 
 .subscribe-submit-button {
   background-color: #82b3d3;
+  width: 230px;
+  min-height: 52px;
   font-size: 20px;
   line-height: 36px;
   margin: 0;
-  padding: 8px 50px;
+  padding: 8px 20px;
   border-radius: 0 4px 4px 0;
 }
 
 .subscribe-submit-button:hover,
-.subscribe-submit-button:focus,
+.subscribe-submit-button:focus-visible,
 .catalog-filter-submit-button:hover,
-.catalog-filter-submit-button:focus,
+.catalog-filter-submit-button:focus-visible,
 .hotel-card-favourite-button:hover,
-.hotel-card-favourite-button:focus {
+.hotel-card-favourite-button:focus-visible {
   background-color: #68a2ca;
 }
 
@@ -126,12 +129,11 @@ body {
   background-color: #82b3d3;
   padding: 8px 50px;
   min-width: 190px;
-  margin-bottom: 30px;
 }
 
 .catalog-filter-reset-button {
   background-color: transparent;
-  border: 3px solid transparent;
+  border-style: none;
   border-radius: 4px;
   padding: 8px 58px;
   max-width: 190px;
@@ -141,7 +143,7 @@ body {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.catalog-filter-reset-button:focus {
+.catalog-filter-reset-button:focus-visible {
   border: 3px solid #83b3d3;
 }
 
@@ -173,7 +175,7 @@ body {
 }
 
 .favoutite-added-button:hover,
-.favoutite-added-button:focus {
+.favoutite-added-button:focus-visible {
   background-color: #6c9e42;
 }
 
@@ -227,7 +229,7 @@ body {
 }
 
 .navigation-logo:hover,
-.navigation-logo:focus {
+.navigation-logo:focus-visible {
   opacity: 0.5;
 }
 
@@ -258,7 +260,7 @@ body {
 }
 
 .navigation-link:hover,
-.navigation-link:focus {
+.navigation-link:focus-visible {
   color: #756157;
 }
 
@@ -271,7 +273,7 @@ body {
   position: absolute;
   left: 16px;
   right: 16px;
-  bottom: 0;
+  bottom: -1px;
   height: 2px;
   background-color: #756257
 }
@@ -291,7 +293,7 @@ body {
 }
 
 .navigation-link-user:not(:last-child):hover,
-.navigation-link-user:not(:last-child):focus {
+.navigation-link-user:not(:last-child):focus-visible {
   border: none;
   color: #756157;
 }
@@ -357,7 +359,7 @@ body {
 }
 
 .footer-social-button:hover,
-.footer-social-button:focus {
+.footer-social-button:focus-visible {
   color: #68a2ca;
 }
 
@@ -375,7 +377,7 @@ body {
 }
 
 .footer-phone:hover,
-.footer-phone:focus {
+.footer-phone:focus-visible {
   color: #756157;
 }
 
@@ -392,7 +394,7 @@ body {
 }
 
 .footer-developer-logo:hover,
-.footer-developer-logo:focus {
+.footer-developer-logo:focus-visible {
   color: #756157;
 }
 
@@ -693,6 +695,7 @@ body {
   font-weight: 700;
   color: #ffffff;
   margin: 0;
+  margin-bottom: 8px;
   padding: 0;
 }
 
@@ -701,18 +704,55 @@ body {
   flex-wrap: wrap;
   list-style-type: none;
   padding: 0;
+  margin: 0;
+  margin-bottom: 40px;
+  align-items: center;
 }
 
 .breadcrums-link {
   font-size: 16px;
   line-height: 21px;
   color: #ffffff;
+  display: block;
+}
+
+.breadcrums-item {
+  display: flex;
+
+}
+
+.breadcrums-item:not(:last-child)::after {
+  content: "";
+  background-image: url("../images/breadcrumbs-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 8px;
+  height: 20px;
+  display: block;
+  margin: 0 10px 0 10px;
 }
 
 .breadcrums-link-home {
   width: 13px;
-  padding: 5px 5px 5px 0;
 }
+
+.breadcrums-link-current {
+  pointer-events: none;
+}
+
+.breadcrums-link:hover {
+  opacity: 0.6;
+}
+
+.breadcrums-link:focus-visible {
+  color: #ffffff;
+}
+
+.breadcrums-link:active {
+  opacity: 0.3;
+}
+
+/* Filter form*/
 
 .form-container {
   display: flex;
@@ -724,9 +764,9 @@ body {
 }
 
 .catalog-filter-list {
-  list-style-type: none;
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 .catalog-filter-group {
@@ -737,12 +777,75 @@ body {
   border: none;
 }
 
-.catalog-filter-item {
-  padding-bottom: 16px;
+.catalog-filter-item label {
+  line-height: 23px;
+  cursor: pointer;
 }
 
-.catalog-filter-item:last-child {
-  padding-bottom: 0;
+.catalog-filter-item:not(:last-child) label {
+  margin-bottom: 16px
+}
+
+.control {
+  position: relative;
+  display: block;
+}
+
+.control:hover {
+  opacity: 0.6;
+}
+
+.control:active {
+  opacity: 0.3;
+}
+
+.control:disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.control-input {
+  appearance: none;
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  cursor: pointer;
+  margin: 0;
+  margin-right: 16px;
+  border-radius: 4px;
+  position: absolute;
+}
+
+.control-input[type="checkbox"]:checked::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/tick-checkbox.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.control-input[type="radio"] {
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/tick-radio.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.filter-name {
+  margin-left: 36px;
 }
 
 .price-filter {
@@ -750,10 +853,112 @@ body {
   margin-left: 70px;
 }
 
+.price-range-scale {
+  position: relative;
+  height: 4px;
+  width: 288px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.price-range-bar {
+  height: 4px;
+  width: 226px;
+  background-color: #ffffff;
+  position: absolute;
+}
+
+.price-range-toggle {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background-color: #ffffff;
+  border-style: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.price-range-toggle:hover {
+  background-color: #ffffff;
+}
+
+.price-range-toggle:focus-visible {
+  border: 3px solid #83b3d3;
+}
+
+.price-range-toggle:active {
+  border: 2px solid #83b3d3;
+}
+
+.price-range-toggle:disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.toggle-min {
+  top: -10px;
+}
+
+.toggle-max {
+  top: -10px;
+  left: 207px;
+}
+
+.filter-range-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+}
+
+.catalog-filter-range {
+  display: flex;
+  position: relative;
+}
+
+.range-input {
+  height: 48px;
+  max-width: 143px;
+  border-style: none;
+  color: #000000;
+  font-weight: 700;
+  font-size: inherit;
+  line-height: 24px;
+  padding-left: 20px;
+  background-color: #f2f2f2;
+  box-sizing: border-box;
+  margin-bottom: 36px;
+}
+
+.range-input:hover {
+  background-color: #e6e6e6;
+}
+
+.range-input:focus-visible {
+  border: 3px solid #83b3d3;
+}
+
+.range-input.minimum {
+  border-radius: 4px 0 0 4px;
+}
+
+.range-input.maximum {
+  border-radius: 0 4px 4px 0;
+}
+
+.price-range-text {
+  display: block;
+  line-height: 24px;
+  color: #aaaaaa;
+  text-align: right;
+  position: absolute;
+  top: 12px;
+  right: 20px;
+}
+
 .filter-buttons-wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
+  gap: 30px;
 }
 
 .catalog-filter-title {
@@ -765,9 +970,6 @@ body {
   padding-bottom: 30px;
 }
 
-.control-input {
-  line-height: 23px;
-}
 
 /* Catalog list */
 
@@ -796,11 +998,15 @@ body {
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
-  padding: 14px 0 14px 20px;
   min-width: 295px;
+  padding-left: 20px;
   min-height: 48px;
   border-radius: 4px;
   box-sizing: border-box;
+  background-image: url("../images/arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  appearance: none;
 }
 
 .catalog-view {
@@ -833,7 +1039,7 @@ body {
   border: 2px solid #000000;
 }
 
-.catalog-view-button:focus {
+.catalog-view-button:focus-visible {
   border: 2px solid #68a2ca;
 }
 
@@ -997,7 +1203,7 @@ body {
 }
 
 .pagination-link:not(.pagination-link-current):not(.pagination-next):hover,
-.pagination-link:not(.pagination-link-current):not(.pagination-next):focus {
+.pagination-link:not(.pagination-link-current):not(.pagination-next):focus-visible {
   background-color: #68a2ca;
 }
 
@@ -1017,6 +1223,6 @@ body {
 }
 
 .pagination-next:hover,
-.pagination-next:focus {
+.pagination-next:focus-visible {
   background-color: #f2f2f2;
 }
