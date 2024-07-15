@@ -223,6 +223,76 @@
         </div>
       </footer>
     </div>
+    <div class="modal-container hidden">
+      <div class="modal modal-search">
+        <button class="modal-close-button">
+          <span class="visually-hidden">Закрыть</span>
+          <svg aria-hidden="true" width="15" height="15" viewBox="0 0 15 15" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.4907 1.78279L13.1984 0.490479L7.49072 6.19817L1.78303 0.490479L0.490723 1.78279L6.19842 7.49048L0.490723 13.1982L1.78303 14.4905L7.49072 8.78279L13.1984 14.4905L14.4907 13.1982L8.78303 7.49048L14.4907 1.78279Z"></path>
+          </svg>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <form class="modal-search-form" action="https://echo.htmlacademy.ru/" method="get">
+            <div class="modal-form-container">
+              <div class="modal-search modal-search-wide checkin">
+                <label for="checkin-date">Дата заезда:</label>
+                <input class="input-date" type="text" name="checkin-date" placeholder="Укажите дату" value="27 апреля 2020" id="checkin-date"
+                  required>
+                <span class="modal-search-message modal-search-message-error">Мы не можем отправить вас в прошлое.</spab>
+              </div>
+              <div class="modal-search modal-search-wide checkout">
+                <label for="checkout-date">Дата выезда:</label>
+                <input class="input-date" type="text" name="checkout-date" placeholder="Укажите дату" value="1 сентября 2023"
+                  id="checkout-date" required>
+                <span class="modal-search-message">На эти даты есть свободные номера. Пока есть.</span>
+              </div>
+              <div class="modal-search modal-search-tiny adults">
+                <label for="adults">Взрослые:</label>
+                <div class="modal-input-wrapper">
+                <button class="guest-minus-button" type="button">
+                  <svg aria-hidden="true" width="14" height="2" viewBox="0 0 14 2" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0L0 2L14 2V0L0 0Z"></path>
+                  </svg>
+                  <span class="visually-hidden">Уменьшить количество гостей</span>
+                </button>
+                <input class="input-guests" type="number" name="adults" placeholder="1" value="2" id="adults" required>
+                <button class="guest-plus-button" type="button">
+                  <svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"></path>
+                  </svg>
+                  <span class="visually-hidden">Увеличить количество гостей</span>
+                </button>
+              </div>
+              </div>
+              <div class="modal-search modal-search-tiny kids">
+                <label for="kids">Дети:</label>
+                <div class="modal-input-wrapper">
+                  <button class="guest-minus-button" type="button">
+                    <svg aria-hidden="true" width="14" height="2" viewBox="0 0 14 2" fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 0L0 2L14 2V0L0 0Z"></path>
+                    </svg>
+                    <span class="visually-hidden">Уменьшить количество гостей</span>
+                  </button>
+                  <input class="input-guests" type="number" name="kids" placeholder="0" value="2" id="adults">
+                  <button class="guest-plus-button" type="button">
+                    <svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"></path>
+                    </svg>
+                    <span class="visually-hidden">Увеличить количество гостей</span>
+                  </button>
+                </div>
+              </div>
+              <button class="modal-submit-button">Найти</button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>
   </body>
 
 </html>
