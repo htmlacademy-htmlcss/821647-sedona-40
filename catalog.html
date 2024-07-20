@@ -10,7 +10,7 @@
 
   <body>
     <div class="container">
-      <header class="page-header">
+      <header class="page-header" data-test="header">
         <nav class="navigation">
           <a class="navigation-logo" href="index.html">
             <img class="page-header-logo" src="images/logo.svg" width="140" height="70" alt="Логотип города Седоны">
@@ -54,7 +54,7 @@
           </ul>
         </nav>
       </header>
-      <main class="main-container main-catalog">
+      <main class="main-container main-catalog" data-test="main">
         <div class="catalog-hero-wrapper">
           <header class="inner-catalog-title">
             <h1 class="inner-header-title">Гостиницы Седоны</h1>
@@ -74,11 +74,11 @@
               </li>
             </ul>
           </header>
-          <section class="catalog-filter">
+          <section class="catalog-filter" data-test="filter">
             <h2 class="visually-hidden">Фильтры для подбора гостиниц</h2>
             <form class="catalog-filter-form" action="https://echo.htmlacademy.ru/" method="get">
               <div class="form-container">
-                <fieldset class="catalog-filter-group">
+                <fieldset class="catalog-filter-group control-filter">
                   <legend class="catalog-filter-title">Инфраструктура:</legend>
                   <ul class="catalog-filter-list">
                     <li class="catalog-filter-item">
@@ -101,7 +101,7 @@
                     </li>
                   </ul>
                 </fieldset>
-                <fieldset class="catalog-filter-group">
+                <fieldset class="catalog-filter-group control-filter">
                   <legend class="catalog-filter-title">Тип жилья:</legend>
                   <ul class="catalog-filter-list">
                     <li class="catalog-filter-item">
@@ -154,66 +154,69 @@
             </form>
           </section>
         </div>
-        <section class="catalog-list">
+        <section class="catalog-list" data-test="catalog">
           <div class="catalog-order-view">
             <h2 class="visually-hidden" hidden>Список гостиниц в Седоне</h2>
             <p class="page-lead">Найдено гостиниц: <span class="hotel-count">38</span></p>
-            <select class="select-control" aria-label="Сортировка">
-              <option value="cheap">Сначала дешёвые</option>
-              <option value="popular">Сначала популярные</option>
-              <option value="expensive">Сначала дорогие</option>
-            </select>
-            <ul class="catalog-view">
-              <li class="catalog-view-item">
-                <a class="button catalog-view-button active" href="catalog.html?view=tile" title="Вид: плитка">
-                  <svg aria-hidden="true" focusable="false" width="16" height="14" viewBox="0 0 16 14"
-                    xmlns="http://www.w3.org/2000/svg" fill="none">
-                    <g clip-path="url(#a)" fill="#000">
-                      <path d="M4 0H0v6h4V0ZM16 0h-4v6h4V0ZM10 0H6v6h4V0ZM4 8H0v6h4V8ZM16 8h-4v6h4V8ZM10 8H6v6h4V8Z" />
-                    </g>
-                    <defs>
-                      <clipPath>
-                        <path fill="#fff" d="M0 0h16v14H0z" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                  <span class="visually-hidden">Вид: плитка</span>
-                </a>
-              </li>
-              <li class="catalog-view-item">
-                <a class="button catalog-view-button" href="catalog.html?view=card" title="Вид: полноэкранный">
-                  <svg aria-hidden="true" focusable="false" width="16" height="14" viewBox="0 0 16 14" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#a)" fill="#000">
-                      <path d="M16 12H0v2h16v-2ZM14 2v6H2V2h12Zm2-2H0v10h16V0Z" />
-                    </g>
-                    <defs>
-                      <clipPath>
-                        <path fill="#fff" d="M0 0h16v14H0z" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                  <span class="visually-hidden">Вид: полноэкранный</span>
-                </a>
-              </li>
-              <li class="catalog-view-item">
-                <a class="button catalog-view-button" href="catalog.html?view=list" title="Вид: список">
-                  <svg aria-hidden="true" focusable="false" width="16" height="14" viewBox="0 0 16 14" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#a)" fill="#000">
-                      <path
-                        d="M2 0H0v2h2V0ZM16 0H4v2h12V0ZM2 4H0v2h2V4ZM16 4H4v2h12V4ZM2 8H0v2h2V8ZM16 8H4v2h12V8ZM2 12H0v2h2v-2ZM16 12H4v2h12v-2Z" />
-                    </g>
-                    <defs>
-                      <clipPath>
-                        <path fill="#fff" d="M0 0h16v14H0z" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                  <span class="visually-hidden">Вид: список</span>
-                </a>
-              </li>
-            </ul>
+            <div class="catalog-view-wrapper">
+              <select class="select-control" aria-label="Сортировка">
+                <option value="cheap">Сначала дешёвые</option>
+                <option value="popular">Сначала популярные</option>
+                <option value="expensive">Сначала дорогие</option>
+              </select>
+              <ul class="catalog-view">
+                <li class="catalog-view-item">
+                  <a class="button catalog-view-button active" href="catalog.html?view=tile" title="Вид: плитка">
+                    <svg aria-hidden="true" focusable="false" width="16" height="14" viewBox="0 0 16 14"
+                      xmlns="http://www.w3.org/2000/svg" fill="none">
+                      <g clip-path="url(#a)" fill="#000">
+                        <path
+                          d="M4 0H0v6h4V0ZM16 0h-4v6h4V0ZM10 0H6v6h4V0ZM4 8H0v6h4V8ZM16 8h-4v6h4V8ZM10 8H6v6h4V8Z" />
+                      </g>
+                      <defs>
+                        <clipPath>
+                          <path fill="#fff" d="M0 0h16v14H0z" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <span class="visually-hidden">Вид: плитка</span>
+                  </a>
+                </li>
+                <li class="catalog-view-item">
+                  <a class="button catalog-view-button" href="catalog.html?view=card" title="Вид: полноэкранный">
+                    <svg aria-hidden="true" focusable="false" width="16" height="14" viewBox="0 0 16 14" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#a)" fill="#000">
+                        <path d="M16 12H0v2h16v-2ZM14 2v6H2V2h12Zm2-2H0v10h16V0Z" />
+                      </g>
+                      <defs>
+                        <clipPath>
+                          <path fill="#fff" d="M0 0h16v14H0z" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <span class="visually-hidden">Вид: полноэкранный</span>
+                  </a>
+                </li>
+                <li class="catalog-view-item">
+                  <a class="button catalog-view-button" href="catalog.html?view=list" title="Вид: список">
+                    <svg aria-hidden="true" focusable="false" width="16" height="14" viewBox="0 0 16 14" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#a)" fill="#000">
+                        <path
+                          d="M2 0H0v2h2V0ZM16 0H4v2h12V0ZM2 4H0v2h2V4ZM16 4H4v2h12V4ZM2 8H0v2h2V8ZM16 8H4v2h12V8ZM2 12H0v2h2v-2ZM16 12H4v2h12v-2Z" />
+                      </g>
+                      <defs>
+                        <clipPath>
+                          <path fill="#fff" d="M0 0h16v14H0z" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <span class="visually-hidden">Вид: список</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
           <ul class="hotel-card-list">
             <li class="hotel-card-item">
@@ -298,10 +301,10 @@
             </li>
           </ul>
         </section>
-        <section class="subscribe">
+        <section class="subscribe" data-test="subscribe">
           <div class="lead-wrapper">
             <h2 class="page-lead">Подпишитесь на рассылку</h2>
-            <p class="page-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
+            <p class="page-description">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
           </div>
           <form class="subscribe-form" method="post" action="https://echo.htmlacademy.ru/">
             <label>
@@ -312,7 +315,7 @@
           </form>
         </section>
       </main>
-      <footer class="page-footer">
+      <footer class="page-footer" data-test="footer">
         <div class="page-footer-container">
           <section class="footer-social">
             <h2 class="visually-hidden">Социальные сети</h2>
