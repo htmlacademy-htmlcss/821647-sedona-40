@@ -1631,17 +1631,16 @@ body {
   display: none;
 }
 
-.tooltip-text::after {
+.tooltip-text::before {
   position: absolute;
-  bottom: 100%;
-  left: 0;
-  right: 0;
-  margin-left: 46%;
   content: "";
   background-image: url("../images/tooltip-arrow.svg");
   width: 19px;
   height: 9px;
-  z-index: 2;
+  left: 120px;
+  top: -7px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .tooltip-toggle:hover + .tooltip-text,
