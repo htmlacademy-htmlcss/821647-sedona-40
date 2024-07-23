@@ -1610,7 +1610,7 @@ body {
 
 .tooltip-text {
   position: absolute;
-  top: 41px;
+  margin-top: 15px;
   left: 50%;
   padding: 20px 20px 23px;
   width: 256px;
@@ -1637,12 +1637,12 @@ body {
 
 .tooltip-text::before {
   position: absolute;
+  top: -7px;
   content: "";
   background-image: url("../images/tooltip-arrow.svg");
   width: 19px;
   height: 9px;
   left: 120px;
-  top: -7px;
   margin-left: auto;
   margin-right: auto;
 }
