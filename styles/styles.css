@@ -1591,6 +1591,7 @@ body {
   margin: 0;
   margin-left: 5px;
   display: block;
+  cursor: pointer;
 }
 
 .tooltip-icon {
@@ -1630,11 +1631,6 @@ body {
   display: none;
 }
 
-.tooltip-toggle:hover + .tooltip-text,
-.tooltip-toggle:focus + .tooltip-text {
-  display: block;
-}
-
 .tooltip-text::before {
   position: absolute;
   content: "";
@@ -1645,6 +1641,11 @@ body {
   top: -7px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
 }
 
 .modal-label-icon {
