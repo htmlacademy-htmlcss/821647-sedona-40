@@ -1591,6 +1591,7 @@ body {
   margin: 0;
   margin-left: 5px;
   display: block;
+  cursor: pointer;
 }
 
 .tooltip-icon {
@@ -1610,7 +1611,7 @@ body {
 
 .tooltip-text {
   position: absolute;
-  margin-top: 15px;
+  top: 41px;
   left: 50%;
   padding: 20px 20px 23px;
   width: 256px;
@@ -1635,16 +1636,16 @@ body {
   display: block;
 }
 
-.tooltip-text::before {
+.tooltip-text::after {
   position: absolute;
-  top: -7px;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  margin-left: 46%;
   content: "";
   background-image: url("../images/tooltip-arrow.svg");
   width: 19px;
   height: 9px;
-  left: 120px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .modal-label-icon {
