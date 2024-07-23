@@ -150,9 +150,9 @@
             <p class="page-description">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
           </div>
           <form class="subscribe-form" method="post" action="https://echo.htmlacademy.ru/">
-            <label>
-              <span class="visually-hidden">Ваш email</span>
-              <input type="email" name="email" placeholder="Ваш email" required>
+            <label class="form-label">
+              <span class="visually-hidden">Ваш e-mail</span>
+              <input class="form-input" type="email" name="email" placeholder="Ваш e-mail" required>
             </label>
             <button class="button subscribe-submit-button" type="submit">Подписаться</button>
           </form>
@@ -241,20 +241,20 @@
           <form class="modal-search-form" action="https://echo.htmlacademy.ru/" method="post">
             <div class="modal-form-container">
               <div class="modal-search modal-search-wide checkin">
-                <label class="modal-label" for="checkin-date">Дата заезда:</label>
-                <input id="checkin-date" class="input-date" type="text" name="checkin-date" value="27 апреля 2020"
+                <label class="form-label modal-label" for="checkin-date">Дата заезда:</label>
+                <input id="checkin-date" class="form-input input-date" type="text" name="checkin-date" value="27 апреля 2020"
                   placeholder="Укажите дату" required>
                 <span class="modal-search-message modal-search-message-error">Мы не можем отправить вас в
                   прошлое.</span>
               </div>
               <div class="modal-search modal-search-wide checkout">
-                <label class="modal-label" for="checkout-date">Дата выезда:</label>
-                <input id="checkout-date" class="input-date" type="text" name="checkout-date" placeholder="Укажите дату"
+                <label class="form-label modal-label" for="checkout-date">Дата выезда:</label>
+                <input id="checkout-date" class="form-input input-date" type="text" name="checkout-date" placeholder="Укажите дату"
                   value="1 сентября 2023" required>
                 <span class="modal-search-message">На эти даты есть свободные номера. Пока есть.</span>
               </div>
               <div class="modal-search modal-search-tiny adults">
-                <label class="modal-label" for="adults">Взрослые:</label>
+                <label class="form-label modal-label" for="adults">Взрослые:</label>
                 <div class="modal-input-wrapper">
                   <button class="button guest-change-button minus" type="button">
                     <svg aria-hidden="true" width="14" height="2" viewBox="0 0 14 2" fill="currentColor"
@@ -263,7 +263,7 @@
                     </svg>
                     <span class="visually-hidden">Уменьшить количество гостей</span>
                   </button>
-                  <input id="adults" class="input-guests" type="number" name="adults" value="2" placeholder="1"
+                  <input id="adults" class="form-input input-guests" type="number" name="adults" value="2" placeholder="1"
                     required>
                   <button class="button guest-change-button plus" type="button">
                     <svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="currentColor"
@@ -276,7 +276,7 @@
               </div>
               <div class="modal-search modal-search-tiny kids">
                 <span class="modal-label modal-label-icon">
-                  <label class="modal-label" for="kids">Дети:</label>
+                  <label class="form-label modal-label" for="kids">Дети:</label>
                   <span class="tooltip">
                     <button class="button tooltip-toggle" type="button" aria-labelledby="tooltip-label-kids">
                       <svg class="tooltip-icon" width="21" height="20" viewBox="0 0 21 20" fill="currentColor"
@@ -297,7 +297,7 @@
                     </svg>
                     <span class="visually-hidden">Уменьшить количество гостей</span>
                   </button>
-                  <input id="kids" class="input-guests" type="number" name="kids" value="2" placeholder="0">
+                  <input id="kids" class="form-input input-guests" type="number" name="kids" value="2" placeholder="0">
                   <button class="button guest-change-button" type="button">
                     <svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="currentColor"
                       xmlns="http://www.w3.org/2000/svg">
@@ -307,7 +307,7 @@
                   </button>
                 </div>
               </div>
-              <button class="button modal-submit-button plus" type="button">Найти</button>
+              <button class="button modal-submit-button" type="submit">Найти</button>
             </div>
           </form>
         </section>
