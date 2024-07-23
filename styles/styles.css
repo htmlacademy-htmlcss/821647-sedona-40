@@ -93,7 +93,9 @@ body {
 
 .navigation-button {
   background-color: #756157;
-  padding: 8px 34px;
+  width: 160px;
+  min-height: 36px;
+  padding: 8px 20px;
   margin: 0;
 }
 
@@ -140,16 +142,18 @@ body {
 
 .catalog-filter-submit-button {
   background-color: #82b3d3;
-  padding: 8px 50px;
-  min-width: 190px;
+  width: 190px;
+  min-height: 36px;
+  padding: 8px 20px;
 }
 
 .catalog-filter-reset-button {
   background-color: transparent;
+  width: 190px;
+  min-height: 36px;
+  padding: 8px 20px;
   border: none;
   border-radius: 4px;
-  padding: 8px 58px;
-  max-width: 190px;
 }
 
 .catalog-filter-reset-button:hover {
@@ -1186,7 +1190,7 @@ body {
 .hotel-card-item {
   display: grid;
   grid-template-columns: repeat(2, 140px);
-  grid-template-rows: auto auto auto 37px;
+  grid-template-rows: auto auto auto 1fr;
   align-content: start;
   align-items: start;
   gap: 16px 20px;
