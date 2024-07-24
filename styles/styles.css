@@ -505,7 +505,7 @@ img {
 .main-hero-image {
   display: block;
   margin: 0 auto;
-  max-width: 458px;
+  width: 458px;
 }
 
 /* Advantages */
